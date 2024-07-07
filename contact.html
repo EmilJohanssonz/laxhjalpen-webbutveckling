@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <title>Kontakt</title>
+</head>
+
+<body class="contakt">
+
+<link href="css/webbutveckling-1.css" rel="stylesheet">
+<!--Här börjar jag med en ny huvudrubrik och sedan har jag kunnat skapat en kontakt formulär.-->
+<h1>Kontakta mig!</h1>
+<form action="contact.html" method="post">
+<fieldset>
+  <p>
+    <label for="uname">Namn:</label>
+    <label for="uname" class="reqfrield">
+      <strong class="required" title="Obligatorisk uppgift">*</strong>
+    </label>
+    <input type="text" name="uname" id="uname" required placeholder="Förnamn Efternamn">
+  </p>
+  <p>
+    <label for="umail">Mejladress:</label>
+    <label for="umail" class="reqfield">
+      <strong class="required" title="Obligatorisk uppgift">*</strong>
+    </label>
+    <input type="email" name="umail" id="umail" required placeholder="e-postadress" />
+  </p>
+  
+</fieldset>
+
+<fieldset>
+  <p>
+    <label for="mmessage">Meddelande:</label>
+    <label for="mmessage" class="reqfrield">
+      <strong class="requried" title="Obligatorisk uppgift">*</strong>
+
+    </label>
+      <textarea id="mmessage" name="mmessage" required placeholder="Skriv ditt meddelande. Minst 25 tecken." ></textarea>
+  </p>
+</fieldset>
+
+<fieldset>
+  <p>
+    <input value="skicka" type="submit">
+  </p>
+  <input name="prevent_multiple_submits"
+         value="{$random_string}" type="hidden">
+</fieldset> 
+</form>
+</div>
+
+</body>
+</html>
