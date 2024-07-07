@@ -1,0 +1,710 @@
+@charset "UTF-8";
+/*
+==================================================================================
+Global rules
+==================================================================================
+*/
+html {
+    margin: 2%;
+}
+body {
+    margin: auto;
+    max-width: 860px;
+    font-size: 100%;
+    font-family: "Helvetica Neue", "Liberation Sans", Calibri, Arial, sans-serif;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+
+ 
+
+ body > header,
+ body > footer {
+    flex: 0 0 100%;
+ }
+
+
+/*
+==================================================================================
+Rules for reusable components
+==================================================================================
+*/
+
+.dborder {
+    border: 1px solid #ccc;
+    padding: 5px; 
+}
+
+
+
+/* dborder ska vara här - avsnitt 11.7 */
+
+/*
+==================================================================================
+Page header, all pages
+==================================================================================
+*/
+header {
+    text-align: center;
+ }
+
+.hwrap {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.hwrap > a {
+    margin-right: 30px;
+}
+
+h1 {
+    font-family: 'Merienda One', cursive;
+}
+
+h1::first-letter {
+    color: #00AF64;
+}
+
+.startpage h1 {
+    font-size: 500%;
+     }
+
+ .tagline { 
+    font-size: 120%;
+    padding: 0.5em;
+    border-top: 3px double #00AF64;
+    border-bottom: 3px double #00AF64;
+    margin: 1em 0;
+}
+/*
+==================================================================================
+Page footer rules
+==================================================================================
+*/
+
+footer {
+    margin-top: 3em;
+    text-align: center;
+    color: #999;
+}
+/* TODO Avsnitt 5.2 */
+
+/*
+==================================================================================
+Main site navigation
+==================================================================================
+*/
+.menu > li,
+.menu > h2 {
+    margin: 0 0 1em;
+    padding: 2em 0;
+    background-color: #F5F5F5;
+    text-align: center;
+    box-shadow: inset 0 0 20px #007241;
+    border-radius: 50%;
+    font-family: 'Merienda One', cursive;
+}
+
+.menu a {
+    display: block;
+}
+
+.menu {
+    margin: 1em 0;
+    padding: 0;
+}
+
+.menu li {
+    margin: 0 0 1rem;
+    list-style: none;
+}
+
+.menu a:link,
+.menu a:visited {
+    text-decoration: none;
+    color: #000;
+
+}
+
+.menu a:focus,
+.menu a:hover {
+    text-decoration: underline;
+    color: #A62F00;
+}
+
+.menu a:active {
+    text-decoration: underline;
+    color: #FF4900;
+}
+
+/* Alla regler för .menu med relaterade element */
+
+/* TODO Avsnitt 5.2, 5.4, 5.5, 5.6, 11.4.2 */
+
+
+/*
+==================================================================================
+Start page rules
+==================================================================================
+*/
+.startpage .logo {
+    width: 235px;
+    height: 198px;
+}
+
+.startpage section {
+    flex: 0 0 22%;
+}
+.startpage {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+}
+
+/* Regler med klassen .startpage, avsnitt 5.2, 5.3 och 5.8 */
+
+/*
+==================================================================================
+Subpages
+==================================================================================
+*/
+
+.subpage .hwrap > a,
+
+nav {
+    flex: 0 1 20%;
+    min-width: 146px;
+    margin-right: 10px;
+   
+}
+
+.subpage .logo {
+    width: 146px;
+    height: 123px;
+}
+
+.subpage .hwrap > h1,
+div[role=main] {
+    flex: 1 1 300px;
+}
+
+
+.subpage h1 {
+    font-size: 2.6rem;
+}
+h1 > span {
+    color: #A62F00;
+}
+
+.subpage .hwrap {
+    justify-content: space-between;
+
+}
+
+.subpage h2 {
+    text-align: center;
+
+}
+
+article {
+    padding-bottom: 1em;
+    margin-bottom: 2em;
+    border-bottom: 3px double #00AF64;
+}
+
+article:last-child {
+    border-bottom: none;
+    margin-bottom: 0; 
+}
+
+figure {
+    float: left;
+    margin: 0;
+}
+figure img {
+    width: 128px;
+    height: 128px;
+}
+figcaption {
+    font: italic bolder 110% sans-serif;
+    font-family: inherit;
+    text-align: center;
+    text-transform: uppercase;
+    color: #666;
+}
+
+article p {
+    margin-left: 140px;
+    hyphens: auto;
+}
+
+
+
+
+
+/* TODO Avsnitt 11.4.1, 11.6,  */
+
+/*
+==================================================================================
+Tables
+==================================================================================
+*/
+table {
+    border-spacing: 0;
+    border: 1px solid #d3d3d3;
+    width: 96%;
+    margin: 1em auto 2em;
+    border-radius: 5;
+    box-shadow: 0 0 4px rgba(0, 0, 0, 0.2);
+}
+
+thead {
+    font-size: 150%;
+    text-shadow: #fff 1px 1px 1px;
+}
+
+th, td {
+    padding: 1.1rem 1.8rem 1.1rem;
+}
+
+th {
+    padding-top: 1.4rem;
+    background: #ddd;
+    text-align: left;
+}
+
+th:not(:last-child) {
+    border-right: 1px solid #f2f2f2;
+}
+
+td {
+    border-top: 1px solid #e0e0e0;
+    border-right: 1px solid #e0e0e0;
+}
+
+tr:target {
+    background-color: #61d7a4;
+}
+
+tr:hover {
+    background-color: #ff9b73;
+}
+
+tr {
+    transition: background-color 1s;
+}
+
+/* TODO Avsnitt 12.3 */
+
+/*
+==================================================================================
+Nivo Slider
+==================================================================================
+*/
+
+.nivo-caption {
+	text-align: center;
+}
+.nivoSlider {
+	position:relative;
+	width:100%;
+	height:auto;
+	overflow: hidden;
+}
+.nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	max-width: none;
+}
+.nivo-main-image {
+	display: block !important;
+	position: relative !important; 
+	width: 100% !important;
+}
+
+/* If an image is wrapped in a link */
+.nivoSlider a.nivo-imageLink {
+	position:absolute;
+	top:0px;
+	left:0px;
+	width:100%;
+	height:100%;
+	border:0;
+	padding:0;
+	margin:0;
+	z-index:6;
+	display:none;
+	background:white; 
+	filter:alpha(opacity=0); 
+	opacity:0;
+}
+/* The slices and boxes in the Slider */
+.nivo-slice {
+	display:block;
+	position:absolute;
+	z-index:5;
+	height:100%;
+	top:0;
+}
+.nivo-box {
+	display:block;
+	position:absolute;
+	z-index:5;
+	overflow:hidden;
+}
+.nivo-box img { display:block; }
+
+/* Caption styles */
+.nivo-caption {
+	position:absolute;
+	left:0px;
+	bottom:0px;
+	background:#000;
+	color:#fff;
+	width:100%;
+	z-index:8;
+	padding: 5px 10px;
+	opacity: 0.8;
+	overflow: hidden;
+	display: none;
+	-moz-opacity: 0.8;
+	filter:alpha(opacity=8);
+	-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+	-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+	box-sizing: border-box;         /* Opera/IE 8+ */
+}
+.nivo-caption p {
+	padding:5px;
+	margin:0;
+}
+.nivo-caption a {
+	display:inline !important;
+}
+.nivo-html-caption {
+    display:none;
+}
+/* Direction nav styles (e.g. Next & Prev) */
+.nivo-directionNav a {
+	position:absolute;
+	top:45%;
+	z-index:9;
+	cursor:pointer;
+}
+.nivo-prevNav {
+	left:0px;
+}
+.nivo-nextNav {
+	right:0px;
+}
+/* Control nav styles (e.g. 1,2,3...) */
+.nivo-controlNav {
+	text-align:center;
+	padding: 15px 0;
+}
+.nivo-controlNav a {
+	cursor:pointer;
+}
+.nivo-controlNav a.active {
+	font-weight:bold;
+}
+
+
+/* TODO Avsnitt 14.7.4 */
+
+.theme-default .nivoSlider {
+	position:relative;
+	background:#fff url(loading.gif) no-repeat 50% 50%;
+    margin-bottom:10px;
+    -webkit-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    -moz-box-shadow: 0px 1px 5px 0px #4a4a4a;
+    box-shadow: 0px 1px 5px 0px #4a4a4a;
+}
+.theme-default .nivoSlider img {
+	position:absolute;
+	top:0px;
+	left:0px;
+	display:none;
+}
+.theme-default .nivoSlider a {
+	border:0;
+	display:block;
+}
+
+.theme-default .nivo-controlNav {
+	text-align: center;
+	padding: 20px 0;
+}
+.theme-default .nivo-controlNav a {
+	display:inline-block;
+	width:22px;
+	height:22px;
+	background:url(bullets.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	margin: 0 2px;
+}
+.theme-default .nivo-controlNav a.active {
+	background-position:0 -22px;
+}
+
+.theme-default .nivo-directionNav a {
+	display:block;
+	width:30px;
+	height:30px;
+	background:url(arrows.png) no-repeat;
+	text-indent:-9999px;
+	border:0;
+	opacity: 0;
+	-webkit-transition: all 200ms ease-in-out;
+    -moz-transition: all 200ms ease-in-out;
+    -o-transition: all 200ms ease-in-out;
+    transition: all 200ms ease-in-out;
+}
+.theme-default:hover .nivo-directionNav a { opacity: 1; }
+.theme-default a.nivo-nextNav {
+	background-position:-30px 0;
+	right:15px;
+}
+.theme-default a.nivo-prevNav {
+	left:15px;
+}
+
+.theme-default .nivo-caption {
+    font-family: Helvetica, Arial, sans-serif;
+}
+.theme-default .nivo-caption a {
+    color:#fff;
+    border-bottom:1px dotted #fff;
+}
+.theme-default .nivo-caption a:hover {
+    color:#fff;
+}
+
+.theme-default .nivo-controlNav.nivo-thumbs-enabled {
+	width: 100%;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled a {
+	width: auto;
+	height: auto;
+	background: none;
+	margin-bottom: 5px;
+}
+.theme-default .nivo-controlNav.nivo-thumbs-enabled img {
+	display: block;
+	width: 120px;
+	height: auto;
+}
+
+/*
+==================================================================================
+Forms (contact page)
+==================================================================================
+*/
+
+/* TODO Avsnitt 13.8.2 */
+
+fieldset {
+    padding: 1em;
+    border-radius: 10px;
+    margin-bottom: 10px;
+}
+
+legend {
+    font-size: larger;
+}
+
+form p {
+    display: flex;
+    flex-wrap: wrap;
+    width:100%;
+}
+
+label {
+    flex: 0 1 10ch;
+    text-align: right;
+    padding-right:1ch; 
+}
+
+.reqfield {
+    flex: 0 0 2ch;
+    order: 1;
+    text-align: center;
+    padding-right: 0;
+}
+
+input[type=text],
+input[type =email],
+textarea {
+    flex: 1 1 25ch;
+    max-width: 300px
+}
+
+textarea {
+    height: 5em;
+    resize: vertical;
+}
+
+input[type="submit"] {
+    display: block;
+    margin: auto;
+}
+       
+/*
+==================================================================================
+Blog page, show and edit
+==================================================================================
+*/
+
+body {
+    font-family:Arial;
+    padding: 20px;
+    
+}
+
+.leftcolumn {
+    margin-top: 12px;
+    margin-bottom: 30px;
+    
+    
+}
+
+ 
+.rightcolumn {
+    margin-top: 120px;
+    margin-bottom: 30px;
+}
+  .fakeimg  img {
+    background-color: #aaa;
+    width: 400px;
+    height: 200px;
+    padding: 20px;
+    margin-top: 35px;
+    
+  }
+
+  .bloggnav {
+    position: relative;
+    margin-top: 120px;
+    margin-left: 330px;
+    margin-bottom: 10px;
+    width:200px;
+    font-size: small;
+    
+    
+  }
+
+  .footer1 {
+    padding: 20px;
+    text-align: center;
+    background: #ddd;
+    margin-top: 80px;
+    margin-left: 50px;
+    margin-bottom: 60px;
+    color:#00AF64;
+    margin: auto;
+
+  }
+  
+  @media screen and (max-width: 800px) {
+    .leftcolumn, .rightcolumn {
+      width: 100%;
+      padding: 0;
+    }
+  }
+
+/*
+==================================================================================
+Adaptive design
+==================================================================================
+*/
+.tagline button {
+    display: none;  /* Aktivera */
+}
+@media (max-width: 750px) {
+    .hwrap > a {
+        margin-right: 25px;
+    }
+    .startpage .Logo {
+        width: 209px;
+        height: 187px;
+    }
+    .startpage > header h1 {
+        font-size: 400%;
+    }
+    p.tagline {
+        font-size: 110%;
+    }
+    .startpage section {
+        flex: 0 0 44%;
+    }
+
+@media (max-width: 650px) {
+}
+
+@media (max-width: 550px) {
+}
+nav,
+div[role=main] {
+    flex: 0 0 100%;
+    margin: 0;
+}
+.subpage .tagline {
+    margin: 0.5em 0 0.2em;
+    text-align: right;
+}
+.tagline button {
+    display: inline;
+}
+.menu > li {
+    margin: 0 0 0.2em;
+    padding: 0.4em 0;
+    box-shadow: inset 0 0 10px #007241;
+    border-radius: 1em;
+}
+.subpage .menu {
+    margin: 0 0.1em;
+    padding: 0;
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height 0.3s;
+}
+.menu.show {
+    max-height: 165px;
+}
+/* 475 px was a breakpoint for flex design on subpages */
+@media (max-width: 476px) {
+    .subpage .hwrap a {
+        flex: 0 0 100%;
+    }
+    .hwrap h1 {
+        margin: 0.1em;
+    }
+}
+
+
+@media (max-width: 380px) {
+    label {
+        flex: 0 0 auto;
+        text-align: left;
+        padding-right: 0;
+    }
+    .reqfield {
+        order: 0;
+    }
+    input[type-text],
+    input[type-email],
+    textarea {
+        flex: 0 0 100%;
+        margin-top: 3px;
+    }
+}
+
+    /* Lägg till regler enligt kapitel 15 */
+}
+
+
+/* TODO Avsnitt 15.4.2 + arbetsboken */
